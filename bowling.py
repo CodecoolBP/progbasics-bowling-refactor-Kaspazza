@@ -6,8 +6,7 @@ def score(game):
             result += 10 - last
         else:
             result += value(game[i])
-        if frame < 10 and value(game[i]) == 10:
-            if game[i] in ('/', 'X', 'x'):
+        if frame < 10 and game[i] in ('/', 'X', 'x') :
                 result += value(game[i + 1])
                 if game[i] in ('X', 'x'):
                     if game[i + 2] == '/':
